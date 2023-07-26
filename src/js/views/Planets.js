@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import { Context } from '../store/appContext';
 import { Link } from 'react-router-dom';
 
-const Characters = () => {
-  const { store, actions } = useContext(Context);
 
+const Planets = () => {
+const { store, actions } = useContext(Context);
   return (
     <>
-      <div><h1>Characters</h1></div>
-      <div className='d-flex justify-content-start container-fluid'>
-        {store.charactersStarWars.map((value, index) => {
+    <div><h1>Planets</h1></div>
+    <div className='d-flex justify-content-start container-fluid'>
+        {store.planetsStarWars.map((value, index) => {
           return <div className="card w-25" style={{ height: "25%" }}>
             <img className="card-img-top" src="..." alt="Card image cap" />
             <div className="card-body">
@@ -21,9 +21,8 @@ const Characters = () => {
           </div>
         })}
       </div>
-
     </>
   )
 }
 
-export default Characters
+export default Planets

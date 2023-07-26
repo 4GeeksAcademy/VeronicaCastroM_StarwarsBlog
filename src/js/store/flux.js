@@ -15,6 +15,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			charactersStarWars: [
 
+			],
+			planetsStarWars:[
+
 			]
 		},
 		actions: {
@@ -49,6 +52,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(data =>{ 
 					console.log(data);
 					setStore({charactersStarWars: data.results})
+				 })
+				.catch(err => err);
+			},
+			fetchPlanetsStarWars: ()=>{
+				fetch('https://www.swapi.tech/api/planets')
+				.then(response => response.json())
+				//SetStore se utiliza para guardar la data en los arrays de store.
+				.then(data =>{ 
+					console.log(data);
+					setStore({planetsStarWars: data.results})
 				 })
 				.catch(err => err);
 			}
