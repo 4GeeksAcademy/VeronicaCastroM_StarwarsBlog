@@ -12,6 +12,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+			charactersStarWars: [
+
 			]
 		},
 		actions: {
@@ -37,6 +40,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			//function to update myCharacters
+			fetchCharactersStarWars: ()=>{
+				fetch('https://www.swapi.tech/api/people')
+				.then(response => response.json())
+				//SetStore se utiliza para guardar la data en los arrays de store.
+				.then(data =>{ 
+					console.log(data);
+					setStore({charactersStarWars: data.results})
+				 })
+				.catch(err => err);
 			}
 		}
 	};
