@@ -18,6 +18,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			planetsStarWars:[
 
+			],
+			vehiclesStarWars:[
+
 			]
 		},
 		actions: {
@@ -46,7 +49,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			//function to update myCharacters
 			fetchCharactersStarWars: ()=>{
-				fetch('https://www.swapi.tech/api/people')
+				fetch('https://swapi.dev/api/people')
 				.then(response => response.json())
 				//SetStore se utiliza para guardar la data en los arrays de store.
 				.then(data =>{ 
@@ -56,12 +59,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch(err => err);
 			},
 			fetchPlanetsStarWars: ()=>{
-				fetch('https://www.swapi.tech/api/planets')
+				fetch('https://swapi.dev/api/planets')
 				.then(response => response.json())
 				//SetStore se utiliza para guardar la data en los arrays de store.
 				.then(data =>{ 
 					console.log(data);
 					setStore({planetsStarWars: data.results})
+				 })
+				.catch(err => err);
+			},
+		    fetchVehiclesStarWars:()=>{
+				fetch('https://swapi.dev/api/vehicles')
+				.then(response => response.json())
+				//SetStore se utiliza para guardar la data en los arrays de store.
+				.then(data =>{ 
+					console.log(data);
+					setStore({vehiclesStarWars: data.results})
 				 })
 				.catch(err => err);
 			}

@@ -37,6 +37,8 @@ const injectContext = PassedComponent => {
 			 **/
 			state.actions.fetchCharactersStarWars();
 			state.actions.fetchPlanetsStarWars();
+			state.actions.fetchVehiclesStarWars();
+			
 			
 		}, []);
 
