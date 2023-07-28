@@ -86,10 +86,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({favoriteItems: [newItem, ...store.favoriteItems]})
 				localStorage.setItem("favoriteItems", JSON.stringify(store.favoriteItems));
 			},
-			deleteFavoriteItems : (ind)=>{
+			deleteFavoriteItems : (index)=>{
                //get the store
 				const store = getStore();
-				store.favoriteItems.filter((_, i) => i !== ind);
+				store.favoriteItems.filter((value, i) => i != index);
+				localStorage.setItem("favoriteItems", JSON.stringify(store.favoriteItems));
+				console.log('Este es el index' + index)
 			}
 		}
 	};
