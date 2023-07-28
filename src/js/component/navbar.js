@@ -15,7 +15,7 @@ export const Navbar = () => {
 					</button>
 					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 					{store.favoriteItems.map((value, index)=>{
-						return <li key={index}><a className= {`dropdown-item list-item-${index}`} href="#">{value} <button onClick={()=>{var thisItem = document.querySelector(`.list-item-${index}`); thisItem.innerHTML="";}}><i className="fas fa-trash"></i></button></a></li>
+						return <li className={`list-item-${index}`} key={index}><a className= {`dropdown-item`} href="#">{value} <button onClick={()=>{var thisItem = document.querySelector(`.list-item-${index}`); thisItem.innerHTML="";}}><i className="fas fa-trash"></i></button></a></li>
 					})}
 					</ul>
 				</div>
