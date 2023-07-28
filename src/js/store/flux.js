@@ -21,6 +21,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			vehiclesStarWars:[
 
+			],
+			favoriteItems:[
+
 			]
 		},
 		actions: {
@@ -77,6 +80,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({vehiclesStarWars: data.results})
 				 })
 				.catch(err => err);
+			},
+			addFavoriteItems : (newItem)=>{
+				const store = getStore();
+				setStore({favoriteItems: [newItem, ...store.favoriteItems]})
+				localStorage.setItem("favoriteItems", JSON.stringify(store.favoriteItems));
+			},
+			deleteFavoriteItems : (ind)=>{
+               //get the store
+				const store = getStore();
+				store.favoriteItems.filter((_, i) => i !== ind);
 			}
 		}
 	};
