@@ -86,6 +86,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({favoriteItems: [newItem, ...store.favoriteItems]})
 				localStorage.setItem("favoriteItems", JSON.stringify(store.favoriteItems));
 			},
+			deleteFavoriteItems : (position)=>{
+                const store = getStore();
+				let newFavoriteList = store.favoriteItems.filter((favorite, index)=> index != position )
+				setStore({favoriteItems: newFavoriteList})
+
+			}
 			
 		}
 	};

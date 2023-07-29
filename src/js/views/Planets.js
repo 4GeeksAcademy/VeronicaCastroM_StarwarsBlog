@@ -19,7 +19,9 @@ const Planets = () => {
               <h5 className="card-title">{value.name}</h5>
               <p className="card-text">Population: {value.population}</p>
               <p className="card-text">Terrain: {value.terrain}</p>
+                <Link to={"/detailsPlanets/" + index}>
                 <button className='btn btn-outline-primary'>Learn More</button>
+                </Link>
               <button type="button" className="btn btn-outline-warning" onClick={()=>{actions.addFavoriteItems(value.name)}}><i className="far fa-star"></i></button>
             </div>
           </div>
