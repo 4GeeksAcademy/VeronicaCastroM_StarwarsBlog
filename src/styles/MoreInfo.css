@@ -1,0 +1,22 @@
+.jumbotron{
+    text-align: center;
+}
+
+.Extra-info{
+    display: flex;
+    justify-content: center;
+}
+
+.more-info-img{
+    max-height: 550px;
+    max-width: 400px;
+    margin: 20px;
+    
+}
+
+h3{
+    margin-right: 10px;
+    font-size:large;
+}
+
+

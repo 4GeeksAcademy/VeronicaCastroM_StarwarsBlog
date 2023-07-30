@@ -1,4 +1,26 @@
-.card{
-    width: 50rem;
-    height: 25rem;
+.main-container{
+    max-height: 500px;
+    display: flex;
+    overflow-x:scroll;
 }
+
+
+.main-container .card{
+    min-width: 250px;
+    height: 350px;
+    line-height: 20px;
+    text-align: center;
+    background-color: aliceblue;
+    margin-right: 5px;
+}
+
+.buttons-group{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin-right: 5px;
+}
+
+
