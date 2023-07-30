@@ -7,7 +7,7 @@ const Vehicles = () => {
     const { store, actions } = useContext(Context);
     return (
         <>
-            <div><h1 className='text-danger'>Vehicles</h1></div>
+            <div><h1 className='text-warning'>Vehicles</h1></div>
             <div className='main-container'>
                 {store.vehiclesStarWars.map((value, index) => {
                     return <div className="card  w-25" key={index} style={{ height: "25%" }}>

@@ -5,16 +5,17 @@ import { Link } from 'react-router-dom';
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar navbar-light bg-dark border-bottom border-warning mb-3">
+			<div className='d-flex'>
 			<Link to="/">
-				<span className="navbar-brand mb-0 w-0"><img className="img-fluid w-25 m-2" src="https://th.bing.com/th?id=OIP.0kf7TE4v2mas_qNT3No48AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" /></span>
+				<span className="navbar-brand mb-0 w-0"><img className="img-fluid w-25 mt-4 ms-2 " src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo.png" /></span>
 			</Link>
 			<div className="dropdown ml-auto">
 				<button className="btn btn-warning dropdown-toggle m-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 					Favorites
 				</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-					{store.favoriteItems.map((value, index) => {
+				{ store.favoriteItems.map((value, index) => {
 						return <li className='list-item'
 							key={index}>
 							<a className='dropdown-item' href="#">{value}
@@ -23,6 +24,7 @@ export const Navbar = () => {
 						</li>
 					})}
 				</ul>
+			</div>
 			</div>
 
 

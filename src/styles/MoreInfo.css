@@ -1,3 +1,7 @@
+body{
+    background-image: url('https://e0.pxfuel.com/wallpapers/981/957/desktop-wallpaper-futuristic-star-wars-background-motion-background-storyblocks-video-for-your-mobile-tablet-explore-star-wars-pattern-background-star-wars-pattern-background-star-wars-star.jpg');
+}
+
 .jumbotron{
     text-align: center;
 }
@@ -14,9 +18,18 @@
     
 }
 
-h3{
+.Extra-info h3{
     margin-right: 10px;
     font-size:large;
+    color: rgb(255, 255, 255);
+}
+
+.jumbotron h1{
+    color: #e6cd11;
+}
+
+.jumbotron p{
+    color: rgb(255, 255, 255);
 }
 
 

@@ -10,7 +10,7 @@ const Characters = () => {
 
   return (
     <>
-      <div><h1 className='text-danger'>Characters</h1></div>
+      <div><h1 className='text-warning'>Characters</h1></div>
       <div className='main-container' style={{ height: "25%" }}>
         {store.charactersStarWars.map((value, index) => {
           return <div className="card"  key={index} style={{ height: "25%"}}>

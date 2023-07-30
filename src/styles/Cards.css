@@ -1,5 +1,5 @@
 .main-container{
-    max-height: 500px;
+    max-height: 700px;
     display: flex;
     overflow-x:scroll;
 }
@@ -7,7 +7,6 @@
 
 .main-container .card{
     min-width: 250px;
-    height: 350px;
     line-height: 20px;
     text-align: center;
     background-color: aliceblue;
@@ -23,4 +22,12 @@ button{
     margin-right: 5px;
 }
 
+
+.card img{
+    min-height: 350px;
+}
+
+.card-body{
+    min-height: 200px;
+}
 

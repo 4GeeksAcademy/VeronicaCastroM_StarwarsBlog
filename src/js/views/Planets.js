@@ -8,7 +8,7 @@ const Planets = () => {
   const { store, actions } = useContext(Context);
   return (
     <>
-      <div><h1 className='text-danger'>Planets</h1></div>
+      <div><h1 className='text-warning'>Planets</h1></div>
       <div className='main-container'>
         {store.planetsStarWars.map((value, index) => {
           return <div className="card  w-25" key={index} style={{ height: "25%" }}>
