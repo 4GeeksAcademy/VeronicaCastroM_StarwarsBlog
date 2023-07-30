@@ -1,10 +1,10 @@
 import React,{useContext} from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import Characters from "./Characters";
-import Planets from "./Planets";
+import Characters from "../component/Characters";
+import Planets from "../component/Planets";
 import { Context } from "../store/appContext";
-import Vehicles from "./Vehicles";
+import Vehicles from "../component/Vehicles";
 
 export const Home = () => {
 	const {store, actions} = useContext(Context);
